@@ -2,7 +2,7 @@ import discord
 import sys
 from discord.ext.commands import Bot
 
-token = ''
+token = 'token'
 
 client = discord.Client()
 bot = Bot("!")
@@ -10,7 +10,7 @@ bot = Bot("!")
 
 @client.event
 async def on_ready():
-    CHANNEL_ID = 383966753115471872
+    CHANNEL_ID = number
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('ログインしたうお\nコマンド知らない場合は\n-help\nと入力してね')
     print('ログインしました。')
@@ -19,7 +19,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     ms = f'{member.mention}学生会へようこそ！\n-(ハイフン小文字)の後に学年を入力して送信してね\n例-1年生'
-    await client.get_channel(383966753115471872).send(ms)
+    await client.get_channel(number).send(ms)
 
 
 @client.event
@@ -75,7 +75,7 @@ async def on_message(message):
     if message.content == '-1年生' or message.content == '-１年生':
         role = discord.utils.get(message.guild.roles, name='1年生')
         await message.author.add_roles(role)
-        reply = f'{message.author.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: 4E )\nもし間違えたら-helps\nと打ってね'
+        reply = f'{message.author.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: -4E 〇〇 〇〇 )\nもし間違えたら-helps\nと打ってね'
         await message.channel.send(reply)
     elif message.content == '-fuck':
         role = discord.utils.get(message.guild.roles, name='1年生')
@@ -86,7 +86,7 @@ async def on_message(message):
     if message.content == '-2年生' or message.content == '-２年生':
         role = discord.utils.get(message.guild.roles, name='2年生')
         await message.author.add_roles(role)
-        reply = f'{message.author.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: 4E )\nもし間違えたら-helps\nと打ってね'
+        reply = f'{message.author.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: -4E 〇〇 〇〇 )\nもし間違えたら-helps\nと打ってね'
         await message.channel.send(reply)
     elif message.content == '-fuck':
         role = discord.utils.get(message.guild.roles, name='2年生')
@@ -97,7 +97,7 @@ async def on_message(message):
     if message.content == '-3年生' or message.content == '-３年生':
         role = discord.utils.get(message.guild.roles, name='3年生')
         await message.author.add_roles(role)
-        reply = f'{message.mention}学年役職を付けたよ次\nは-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: 4E )\nもし間違えたら-helps\nと打ってね'
+        reply = f'{message.mention}学年役職を付けたよ次\nは-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: -4E 〇〇 〇〇 )\nもし間違えたら-helps\nと打ってね'
         await message.channel.send(reply)
     elif message.content == '-fuck':
         role = discord.utils.get(message.guild.roles, name='3年生')
@@ -108,7 +108,7 @@ async def on_message(message):
     if message.content == '-4年生' or message.content == '-４年生':
         role = discord.utils.get(message.guild.roles, name='4年生')
         await message.author.add_roles(role)
-        reply = f'{message.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: 4E )\nもし間違えたら-helps\nと打ってね'
+        reply = f'{message.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: -4E 〇〇 〇〇 )\nもし間違えたら-helps\nと打ってね'
         await message.channel.send(reply)
     elif message.content == '-fuck':
         role = discord.utils.get(message.guild.roles, name='4年生')
@@ -119,7 +119,7 @@ async def on_message(message):
     if message.content == '-5年生' or message.content == '-５年生':
         role = discord.utils.get(message.guild.roles, name='5年生')
         await message.author.add_roles(role)
-        reply = f'{message.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: 4E )\nもし間違えたら-helps\nと打ってね'
+        reply = f'{message.mention}学年役職を付けたよ\n次は-(ハイフン小文字)の後にじ自分の学年名前を入力してね(例: -4E 〇〇 〇〇 )\nもし間違えたら-helps\nと打ってね'
         await message.channel.send(reply)
     elif message.content == '-fuck':
         role = discord.utils.get(message.guild.roles, name='5年生')
