@@ -141,7 +141,7 @@ async def on_message(message):
 
 @bot.event
 async def on_message_error(ctx, error):
-    ch = 583226074272497672
+    ch = number
     embed = discord.Embed(title="エラー情報", description="", color=0xf00)
     embed.add_field(name="エラー発生:サーバー名", value=ctx.guild.name, inline=False)
     embed.add_field(name="エラー発生:サーバーID", value=ctx.guild.name, inline=False)
