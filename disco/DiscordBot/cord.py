@@ -14,6 +14,7 @@ async def on_ready():
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('ログインしたうお\nコマンド知らない場合は\n-help\nと入力してね')
     print('ログインしました。')
+    ```ターミナル上の奴```
 
 
 @client.event
@@ -50,12 +51,14 @@ async def on_message(message):
             await message.channel.send('チャンネル履歴を削除したよ！')
         else:
             await message.channel.send('おめぇにそんな権限はねぇ！！')
+        ```この履歴削除は機能してない```
     if message.content == '-musichelp':
         await message.channel.send('''
         ```
         -play
         -
         ''')
+        ```作ろうと思って作ってない```
     if message.content == '-helps':
         await message.channel.send('-fuckと送って役職を消してね\nそうしたらもう一回\n-(ハイフン小文字)の後に学年を入力して送信してね')
 
@@ -151,6 +154,6 @@ async def on_message_error(ctx, error):
 
     m = await bot.get_channel(ch).send(embed=embed)
     await ctx.send(f"エラー発生！！！ごめんなさいちょっと待ってね")
-
+```一応見れるけどバグってるから消していいよ```
 
 client.run(token)
