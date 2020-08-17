@@ -2,7 +2,7 @@ import discord
 import sys
 from discord.ext.commands import Bot
 
-token = 'NjU5NzUxNzM2NjEyODgwMzk0.XgS3rw.vgNzhCP4JNZChmhLRKfCAZ7nr9s'
+token = ''
 
 client = discord.Client()
 bot = Bot("!")
